@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <Switch
+        android:id="@+id/switchNIBP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:switchPadding="8dp"
+        android:text="NIBP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchRPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:switchPadding="8dp"
+        android:text="RPI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchNIBP" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:text="console"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchRPI"
+        tools:background="?android:attr/colorForeground"
+        tools:textColor="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/nibpButton"
+        android:layout_width="88dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:text="Start"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/switchNIBP"
+        app:layout_constraintStart_toEndOf="@+id/switchNIBP"
+        app:layout_constraintTop_toTopOf="@+id/switchNIBP" />
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:onClick="onClickListButton"
+        android:text="List"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/switchRPI"
+        app:layout_constraintStart_toEndOf="@+id/switchRPI"
+        app:layout_constraintTop_toTopOf="@+id/switchRPI" />
+
+    <Button
+        android:id="@+id/errorButton"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:text="Error"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listButton"
+        app:layout_constraintStart_toEndOf="@+id/listButton"
+        app:layout_constraintTop_toTopOf="@+id/listButton" />
+
+    <Button
+        android:id="@+id/readyButton"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:text="Ready"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listButton"
+        app:layout_constraintStart_toEndOf="@+id/errorButton"
+        app:layout_constraintTop_toTopOf="@+id/listButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/endButton"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:text="End"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listButton"
+        app:layout_constraintStart_toEndOf="@+id/readyButton"
+        app:layout_constraintTop_toTopOf="@+id/listButton"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>
